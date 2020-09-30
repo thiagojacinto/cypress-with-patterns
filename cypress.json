@@ -1,1 +1,5 @@
-{}
+{
+  "video": false,
+  "nodeVersion": "system",
+  "baseUrl": "https://repo-listing.web.app"
+}
