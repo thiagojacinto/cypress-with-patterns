@@ -1,0 +1,26 @@
+{
+  "name": "cypress-with-patterns",
+  "version": "0.0.1",
+  "description": "Playing with Cypress and implementing patterns Page Objects and Screenplay",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thiagojacinto/cypress-with-patterns.git"
+  },
+  "keywords": [
+    "cypress",
+    "page-objects",
+    "screenplay",
+    "nodejs",
+    "testing"
+  ],
+  "author": "Thiago Jacinto",
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/thiagojacinto/cypress-with-patterns/issues"
+  },
+  "homepage": "https://github.com/thiagojacinto/cypress-with-patterns#readme"
+}
