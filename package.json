@@ -1,6 +1,6 @@
 {
   "name": "cypress-with-patterns",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Playing with Cypress and implementing patterns Page Objects and Screenplay",
   "main": "index.js",
   "scripts": {
