@@ -1,6 +1,6 @@
 # Cypress.io with Patterns
 
- Using Cypress to handle automation tests implementing Page Objects and Screenplay patterns.
+Using Cypress to handle automation tests implementing Page Objects and Screenplay patterns.
 
 ## BDD Features with Gherkin
 
@@ -8,22 +8,35 @@ The goal was to develop automation tests to the simple list app available at htt
 
 To achieve that, Gherkin features lead the way of thinking the core features of that system. Given/When/Then strategy was used here:
 
-* [_adicionar.feature_](./features/adicionar.feature)
-* [_remover.feature_](./features/remover.feature)
+- [_adicionar.feature_](./features/adicionar.feature)
+- [_remover.feature_](./features/remover.feature)
 
 ## Page objects pattern
 
 Development with this pattern was done under the branch [feature/page-objects](https://github.com/thiagojacinto/cypress-with-patterns/tree/feature/page-objects).
 
 > Objeto _Home_:
-* [support/](./cypress/support)
-  * [pageObjects/](./cypress/support/pageObjects)
-    * [Home/](./cypress/support/pageObjects/Home)
-      * [elements.components.js](./cypress/support/pageObjects/Home/elements.components.js)
-      * [index.js](./cypress/support/pageObjects/Home/index.js)
+
+- [support/](./cypress/support)
+  - [pageObjects/](./cypress/support/pageObjects)
+    - [Home/](./cypress/support/pageObjects/Home)
+      - [elements.components.js](./cypress/support/pageObjects/Home/elements.components.js)
+      - [index.js](./cypress/support/pageObjects/Home/index.js)
 
 > Testes:
-* [integration/](./cypress/integration)
-  * [page-objects/](./cypress/integration/page-objects)
-    * [adicionar.spec.js](./cypress/integration/page-objects/adicionar.spec.js)
-    * [remover.spec.js](./cypress/integration/page-objects/remover.spec.js)
+
+- [integration/](./cypress/integration)
+  - [page-objects/](./cypress/integration/page-objects)
+    - [adicionar.spec.js](./cypress/integration/page-objects/adicionar.spec.js)
+    - [remover.spec.js](./cypress/integration/page-objects/remover.spec.js)
+
+## Lint and precommit hook
+
+This project uses ESLint, Prettier and lint-staged to handle linting operations and precommit hook.
+
+Before hands-on, do not forget to run:
+
+```
+npm install
+npx mrm lint-staged
+```
