@@ -1,0 +1,12 @@
+# Extensions
+*.html
+*.feature
+
+# Node
+node_modules
+
+# Report outputs
+results
+
+# Cypress example and initial structure
+cypress/integration/examples
