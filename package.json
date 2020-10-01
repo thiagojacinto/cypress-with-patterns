@@ -1,12 +1,16 @@
 {
   "name": "cypress-with-patterns",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Playing with Cypress and implementing patterns Page Objects and Screenplay",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "cy:open": "npx cypress open",
-    "cy:run": "npx cypress run"
+    "cy:run": "npx cypress run",
+    "reports:merge": "npx mochawesome-merge ./results/reports-mochawesome/*.json -o results/reports-output/output.json",
+    "reports:generate": "marge -o ./results/reports-output --charts=true --autoOpen=true results/reports-output/output.json",
+    "reports:remove-stdout": "rm -rf results/reports-mochawesome",
+    "cy:report": "npm run cy:run && npm run reports:merge && npm run reports:generate && npm run reports:remove-stdout"
   },
   "repository": {
     "type": "git",
