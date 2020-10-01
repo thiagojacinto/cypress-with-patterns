@@ -1,5 +1,6 @@
 {
   "video": false,
   "nodeVersion": "system",
-  "baseUrl": "https://repo-listing.web.app"
+  "baseUrl": "https://repo-listing.web.app",
+  "testFiles": "page-objects/**.spec.js"
 }
