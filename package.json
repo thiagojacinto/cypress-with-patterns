@@ -14,12 +14,10 @@
   },
   "lint-staged": {
     "cypress/**/*.js": [
-      "eslint src --ext .js",
+      "eslint --ext .js",
       "prettier --write",
       "git add"
-    ],
-    "*.js": "eslint --cache --fix",
-    "*.{js,css,md}": "prettier --write"
+    ]
   },
   "repository": {
     "type": "git",
