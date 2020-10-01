@@ -10,15 +10,16 @@
     "reports:merge": "npx mochawesome-merge ./results/reports-mochawesome/*.json -o results/reports-output/output.json",
     "reports:generate": "marge -o ./results/reports-output --charts=true --autoOpen=true results/reports-output/output.json",
     "reports:remove-stdout": "rm -rf results/reports-mochawesome",
-    "cy:report": "npm run cy:run && npm run reports:merge && npm run reports:generate && npm run reports:remove-stdout",
-    "precommit": "lint-staged"
+    "cy:report": "npm run cy:run && npm run reports:merge && npm run reports:generate && npm run reports:remove-stdout"
   },
   "lint-staged": {
     "cypress/**/*.js": [
       "eslint src --ext .js",
       "prettier --write",
       "git add"
-    ]
+    ],
+    "*.js": "eslint --cache --fix",
+    "*.{js,css,md}": "prettier --write"
   },
   "repository": {
     "type": "git",
@@ -40,6 +41,7 @@
   "devDependencies": {
     "cypress": "^5.3.0",
     "eslint": "^6.8.0",
+    "husky": "^4.3.0",
     "jsdoc": "^3.6.6",
     "lint-staged": "^10.4.0",
     "mocha": "^8.1.3",
@@ -47,5 +49,10 @@
     "mochawesome-merge": "^4.2.0",
     "mochawesome-report-generator": "^5.1.0",
     "prettier": "^1.19.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   }
 }
