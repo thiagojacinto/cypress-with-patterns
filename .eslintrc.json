@@ -1,0 +1,9 @@
+{
+    "extends": "eslint:recommended",
+    "globals": {
+        "cy": "readonly",
+        "Cypress": "readonly"
+    },
+    "rules": {
+    }
+}
