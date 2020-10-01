@@ -1,0 +1,281 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 7,
+    "passes": 7,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-10-01T16:56:01.749Z",
+    "end": "2020-10-01T16:56:17.946Z",
+    "duration": 14176,
+    "testsRegistered": 7,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "444b25fa-2d4a-4e44-ad73-370d52a72a71",
+      "title": "",
+      "fullFile": "cypress/integration/page-objects/adicionar.spec.js",
+      "file": "cypress/integration/page-objects/adicionar.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "ad32e1d9-2e34-4d0c-ab50-81f9125a796f",
+          "title": "Adicionar",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Adicionar repositório a lista",
+              "fullTitle": "Adicionar Adicionar repositório a lista",
+              "timedOut": null,
+              "duration": 3418,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_Home[\"default\"].inserir(\"thiagojacinto/es6-review\");\n_Home[\"default\"].clicarAdicionar();\n_Home[\"default\"].selecionarLista().children().should(\"contain.text\", \"es6-review\");\n_Home[\"default\"].selecionarItemsDaLista().should(\"have.length\", 1);",
+              "err": {},
+              "uuid": "8882e482-30b1-4fd8-9852-526c6df9abf7",
+              "parentUUID": "ad32e1d9-2e34-4d0c-ab50-81f9125a796f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Adicionar mais de um repositório",
+              "fullTitle": "Adicionar Adicionar mais de um repositório",
+              "timedOut": null,
+              "duration": 2469,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_Home[\"default\"].inserir(\"thiagojacinto/es6-review\");\n_Home[\"default\"].clicarAdicionar();\n_Home[\"default\"].selecionarItemsDaLista().should(\"have.length\", 1);\n_Home[\"default\"].inserir(\"cypress-io/cypress-example-recipes\");\n_Home[\"default\"].clicarAdicionar();\n_Home[\"default\"].selecionarItemsDaLista().should(\"have.length\", 2);\n_Home[\"default\"].inserir(\"rust-lang/rust\");\n_Home[\"default\"].clicarAdicionar();\n_Home[\"default\"].selecionarItemsDaLista().should(\"have.length\", 3);",
+              "err": {},
+              "uuid": "a0ac8367-0317-4b03-a559-8ad10676df47",
+              "parentUUID": "ad32e1d9-2e34-4d0c-ab50-81f9125a796f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Tentar adicionar sem inserir nome",
+              "fullTitle": "Adicionar Tentar adicionar sem inserir nome",
+              "timedOut": null,
+              "duration": 275,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_Home[\"default\"].clicarAdicionar();\n_Home[\"default\"].selecionarItemsDaLista().should(\"have.length\", 0);",
+              "err": {},
+              "uuid": "7c4be5a1-3c70-43d8-aad3-98955a5c2155",
+              "parentUUID": "ad32e1d9-2e34-4d0c-ab50-81f9125a796f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "8882e482-30b1-4fd8-9852-526c6df9abf7",
+            "a0ac8367-0317-4b03-a559-8ad10676df47",
+            "7c4be5a1-3c70-43d8-aad3-98955a5c2155"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 6162,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "31b6a66a-6647-4adb-8f4e-c02737fe08a2",
+      "title": "",
+      "fullFile": "cypress/integration/page-objects/remover.spec.js",
+      "file": "cypress/integration/page-objects/remover.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "5b13a61e-e3bc-4544-8633-88d48c04cc18",
+          "title": "Remover",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Tentar limpar uma lista vazia",
+              "fullTitle": "Remover Tentar limpar uma lista vazia",
+              "timedOut": null,
+              "duration": 600,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_Home[\"default\"].acessar();\n_Home[\"default\"].limparLista();\n_Home[\"default\"].selecionarItemsDaLista().should(\"not.exist\");",
+              "err": {},
+              "uuid": "eada4f29-4f2b-4649-8e91-34c5977adb4c",
+              "parentUUID": "5b13a61e-e3bc-4544-8633-88d48c04cc18",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [
+            {
+              "uuid": "7f99cc9f-422e-4ad0-ad8c-ce565159a35c",
+              "title": "Lista com itens na home",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Remover um dos repositórios da lista",
+                  "fullTitle": "Remover Lista com itens na home Remover um dos repositórios da lista",
+                  "timedOut": null,
+                  "duration": 2469,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "_Home[\"default\"].removerPrimeiroItem();\n_Home[\"default\"].selecionarItemsDaLista().should(\"have.length\", 2);",
+                  "err": {},
+                  "uuid": "601540ce-311c-4f1e-aeed-c068f10b0716",
+                  "parentUUID": "7f99cc9f-422e-4ad0-ad8c-ce565159a35c",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Remover mais de um dos repositórios da lista",
+                  "fullTitle": "Remover Lista com itens na home Remover mais de um dos repositórios da lista",
+                  "timedOut": null,
+                  "duration": 2614,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "_Home[\"default\"].removerPrimeiroItem();\n_Home[\"default\"].removerPrimeiroItem();\n_Home[\"default\"].selecionarItemsDaLista().should(\"have.length\", 1);",
+                  "err": {},
+                  "uuid": "6d306291-cac6-45cc-be67-a73fa145edd2",
+                  "parentUUID": "7f99cc9f-422e-4ad0-ad8c-ce565159a35c",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Limpar a lista",
+                  "fullTitle": "Remover Lista com itens na home Limpar a lista",
+                  "timedOut": null,
+                  "duration": 2331,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "_Home[\"default\"].limparLista();\n_Home[\"default\"].selecionarItemsDaLista().should(\"not.exist\");",
+                  "err": {},
+                  "uuid": "298e3b23-274e-4169-b77f-78443a5782be",
+                  "parentUUID": "7f99cc9f-422e-4ad0-ad8c-ce565159a35c",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "601540ce-311c-4f1e-aeed-c068f10b0716",
+                "6d306291-cac6-45cc-be67-a73fa145edd2",
+                "298e3b23-274e-4169-b77f-78443a5782be"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 7414,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [
+            "eada4f29-4f2b-4649-8e91-34c5977adb4c"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 600,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "results/reports-mochawesome",
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "quiet": true,
+        "charts": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}
