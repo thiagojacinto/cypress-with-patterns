@@ -1,6 +1,7 @@
 {
   "reporter": "mochawesome",
   "reporterOptions": {
+    "charts": true,
     "reportDir": "results",
     "overwrite": false,
     "html": false,
