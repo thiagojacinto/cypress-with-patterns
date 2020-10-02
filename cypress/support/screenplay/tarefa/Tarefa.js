@@ -1,4 +1,4 @@
-// import Agente from "../agente/Agente";
+import Agente from "../agente/Agente"; //eslint-disable-line
 import { ScreenplayItem } from "../ScreenplayItem";
 
 /**
@@ -12,5 +12,6 @@ export default class Tarefa extends ScreenplayItem {
    */
   async executaComo(agente) {
     this.lancaExcecaoNaoImplementadoErro(`"executaComo" um ${agente}`);
+    return agente;
   }
 }
