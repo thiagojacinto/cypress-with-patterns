@@ -1,14 +1,14 @@
 import Agente from "./Agente";
 /**
- * Usuario da página, extendendo as caracteristicas de um Agente
+ * @class Usuario.
+ * @classdesc Usuario da página, extendendo as caracteristicas de um Agente
  */
-export default class Usuario extends Agente {
+export class Usuario extends Agente {
   /**
-   * @constructor
+   * Define o nome do usuário.
    * @param {string} nome
    */
-  constructor(nome) {
-    super();
+  chamado(nome = "Usuario") {
     this.nome = nome;
   }
 
