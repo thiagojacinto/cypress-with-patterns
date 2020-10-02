@@ -1,13 +1,16 @@
+// import Agente from "../agente/Agente";
 import { ScreenplayItem } from "../ScreenplayItem";
-// import Ator from "../ator";
 
+/**
+ * @class Tarefa é um conjunto de interações que representam passos de uma lógica de negócios que um Agente pode tentar realizar.
+ */
 export default class Tarefa extends ScreenplayItem {
   /**
    * Método de toda tarefa que é executada.
-   * @param {Ator} ator
-   * @returns {Ator} ator
+   * @param {Agente} agente
+   * @returns {Agente} agente
    */
-  async executaComo(ator = "Ator") {
-    this.lancaExcecaoNaoImplementadoErro(`"executaComo" um ${ator}`);
+  async executaComo(agente) {
+    this.lancaExcecaoNaoImplementadoErro(`"executaComo" um ${agente}`);
   }
 }
