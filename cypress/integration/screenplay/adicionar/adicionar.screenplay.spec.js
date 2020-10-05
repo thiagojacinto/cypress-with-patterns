@@ -11,28 +11,26 @@ import {
 } from "../Tarefas";
 
 describe("Adicionar", () => {
-  describe("Dado que esteja na home", () => {
-    const usuario = new Usuario("Thiago");
+  const usuario = new Usuario("Thiago");
 
-    beforeEach(() => {
-      dado(usuario).tenta(AcessarHome);
-    });
+  beforeEach(() => {
+    dado(usuario).tenta(AcessarHome);
+  });
 
-    it("Adicionar repositório a lista", () => {
-      quando(usuario).tenta(InserirNovoRepositorio);
-      entao(usuario).deve(ExibirLista);
-    });
+  it("Adicionar repositório a lista", () => {
+    quando(usuario).tenta(InserirNovoRepositorio);
+    entao(usuario).deve(ExibirLista);
+  });
 
-    it("Adicionar mais de um repositório a lista", () => {
-      quando(usuario).tenta(InserirNovoRepositorio);
-      e(usuario).tenta(InserirNovoRepositorio);
-      e(usuario).tenta(InserirNovoRepositorio);
-      entao(usuario).deve(ExibirListaContendoTres);
-    });
+  it("Adicionar mais de um repositório a lista", () => {
+    quando(usuario).tenta(InserirNovoRepositorio);
+    e(usuario).tenta(InserirNovoRepositorio);
+    e(usuario).tenta(InserirNovoRepositorio);
+    entao(usuario).deve(ExibirListaContendoTres);
+  });
 
-    it("Tentar adicionar sem informar nome", () => {
-      quando(usuario).tenta(AdicionarValorVazio);
-      entao(usuario).deve(VisualizarListaVazia);
-    });
+  it("Tentar adicionar sem informar nome", () => {
+    quando(usuario).tenta(AdicionarValorVazio);
+    entao(usuario).deve(VisualizarListaVazia);
   });
 });
