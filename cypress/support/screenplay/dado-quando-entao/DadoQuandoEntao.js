@@ -43,15 +43,12 @@ export class DadoQuandoEntao extends ScreenplayItem {
    * Método de composição de tarefas, executando-as em uma cadeia de Promises
    * @param  {...Tarefa} tarefas
    */
-  async composicaoDeTarefas(...tarefas) {
+  composicaoDeTarefas(...tarefas) {
     const arrayTarefas = tarefas.flat();
 
     for (const Tarefa of arrayTarefas) {
-      await new Tarefa().executaComo(this.agente);
+      new Tarefa().executaComo(this.agente);
     }
-    // arrayTarefas.reduce(async (proxima, Tarefa) => {
-    //   return new Tarefa().executaComo(this.agente);
-    // }, Promise.resolve());
   }
 }
 /**
