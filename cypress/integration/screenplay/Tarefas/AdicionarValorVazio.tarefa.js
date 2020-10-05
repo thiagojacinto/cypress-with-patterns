@@ -1,5 +1,5 @@
-import { Tarefa } from "../../../../support/screenplay";
-import { ELEMENTS } from "../../componentes/home.componentes";
+import { Tarefa } from "../../../support/screenplay";
+import { ELEMENTS } from "../componentes/home.componentes";
 
 /**
  * @class AdicionarValorVazio

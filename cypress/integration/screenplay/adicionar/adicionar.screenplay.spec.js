@@ -8,7 +8,7 @@ import {
   InserirNovoRepositorio,
   AdicionarValorVazio,
   VisualizarListaVazia
-} from "./Tarefas";
+} from "../Tarefas";
 
 describe("Adicionar", () => {
   describe("Dado que esteja na home", () => {

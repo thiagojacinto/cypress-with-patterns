@@ -1,4 +1,4 @@
-import { Tarefa, Agente } from "../../../../support/screenplay"; //eslint-disable-line
+import { Tarefa, Agente } from "../../../support/screenplay"; //eslint-disable-line
 /**
  * @class {Tarefa} que representa navegar para homescreen.
  */

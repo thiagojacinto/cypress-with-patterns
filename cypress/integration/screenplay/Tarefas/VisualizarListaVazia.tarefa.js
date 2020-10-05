@@ -1,5 +1,5 @@
-import { Tarefa, Agente } from "../../../../support/screenplay"; //eslint-disable-line
-import { ELEMENTS } from "../../componentes/home.componentes";
+import { Tarefa, Agente } from "../../../support/screenplay"; //eslint-disable-line
+import { ELEMENTS } from "../componentes/home.componentes";
 
 /**
  * @class VisualizarListaVazia

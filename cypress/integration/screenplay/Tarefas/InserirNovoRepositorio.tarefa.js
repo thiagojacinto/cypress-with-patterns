@@ -1,6 +1,5 @@
-import Agente from "../../../../support/screenplay/agente/Agente"; //eslint-disable-line
-import { Tarefa } from "../../../../support/screenplay/tarefa";
-import { ELEMENTS } from "../../componentes/home.componentes";
+import { Tarefa, Agente } from "../../../support/screenplay/tarefa"; //eslint-disable-line
+import { ELEMENTS } from "../componentes/home.componentes";
 /**
  * @class {Tarefa} que representa inserir novo repositório a lista.
  */
