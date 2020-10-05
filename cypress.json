@@ -2,7 +2,7 @@
   "video": false,
   "nodeVersion": "system",
   "baseUrl": "https://repo-listing.web.app",
-  "testFiles": "screenplay/**/**.spec.js",
+  "testFiles": ["screenplay/**/**.spec.js", "page-objects/**/**.spec.js"],
 
   "reporter": "mochawesome",
   "reporterOptions": {
