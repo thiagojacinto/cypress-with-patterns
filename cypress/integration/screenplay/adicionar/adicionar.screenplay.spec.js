@@ -5,7 +5,9 @@ import {
   AcessarHome,
   ExibirLista,
   ExibirListaContendoTres,
-  InserirNovoRepositorio
+  InserirNovoRepositorio,
+  AdicionarValorVazio,
+  VisualizarListaVazia
 } from "./Tarefas";
 
 describe("Adicionar", () => {
@@ -26,6 +28,11 @@ describe("Adicionar", () => {
       e(usuario).tenta(InserirNovoRepositorio);
       e(usuario).tenta(InserirNovoRepositorio);
       entao(usuario).deve(ExibirListaContendoTres);
+    });
+
+    it("Tentar adicionar sem informar nome", () => {
+      quando(usuario).tenta(AdicionarValorVazio);
+      entao(usuario).deve(VisualizarListaVazia);
     });
   });
 });
