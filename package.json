@@ -1,6 +1,6 @@
 {
   "name": "cypress-with-patterns",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Playing with Cypress and implementing patterns Page Objects and Screenplay",
   "main": "index.js",
   "scripts": {
@@ -11,6 +11,13 @@
     "reports:generate": "marge -o ./results/reports-output --charts=true --autoOpen=true results/reports-output/output.json",
     "reports:remove-stdout": "rm -rf results/reports-mochawesome",
     "cy:report": "npm run cy:run && npm run reports:merge && npm run reports:generate && npm run reports:remove-stdout"
+  },
+  "lint-staged": {
+    "cypress/**/*.js": [
+      "eslint --ext .js",
+      "prettier --write",
+      "git add"
+    ]
   },
   "repository": {
     "type": "git",
@@ -31,9 +38,19 @@
   "homepage": "https://github.com/thiagojacinto/cypress-with-patterns#readme",
   "devDependencies": {
     "cypress": "^5.3.0",
+    "eslint": "^6.8.0",
+    "husky": "^4.3.0",
+    "jsdoc": "^3.6.6",
+    "lint-staged": "^10.4.0",
     "mocha": "^8.1.3",
     "mochawesome": "^6.1.1",
     "mochawesome-merge": "^4.2.0",
-    "mochawesome-report-generator": "^5.1.0"
+    "mochawesome-report-generator": "^5.1.0",
+    "prettier": "^1.19.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   }
 }
