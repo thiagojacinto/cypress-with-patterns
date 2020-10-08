@@ -10,7 +10,8 @@
     "reports:merge": "npx mochawesome-merge ./results/reports-mochawesome/*.json -o results/reports-output/output.json",
     "reports:generate": "marge -o ./results/reports-output --charts=true --autoOpen=true results/reports-output/output.json",
     "reports:remove-stdout": "rm -rf results/reports-mochawesome",
-    "cy:report": "npm run cy:run && npm run reports:merge && npm run reports:generate && npm run reports:remove-stdout"
+    "cy:report": "npm run cy:run && npm run reports:merge && npm run reports:generate && npm run reports:remove-stdout",
+    "cy:debug": "DEBUG=cypress* npm run cy:run"
   },
   "lint-staged": {
     "cypress/**/*.js": [
