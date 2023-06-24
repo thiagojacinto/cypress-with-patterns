@@ -37,7 +37,7 @@
   },
   "homepage": "https://github.com/thiagojacinto/cypress-with-patterns#readme",
   "devDependencies": {
-    "cypress": "^5.3.0",
+    "cypress": "^10.11.0",
     "eslint": "^6.8.0",
     "husky": "^4.3.0",
     "jsdoc": "^4.0.2",
